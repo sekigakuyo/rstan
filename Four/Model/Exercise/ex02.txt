@@ -1,2 +1,0 @@
-Y1[n1] ~ Normal(mu1,sigma1)
-Y1[n2] ~ Normal(mu2,sigma2)
