@@ -1,0 +1,9 @@
+load("ex03.RData")
+library(rstan)
+library(ggmcmc)
+
+ggmcmc(ggs(fit), plot= c("traceplot","density"), file= "../../result/Ex03.pdf")
+ms <- rstan::extract(fit)
+
+dif <- ms$mu[,1] - ms$mu[,2]
+p_value <- length(dif[dif>0])/length(dif)
